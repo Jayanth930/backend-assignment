@@ -26,42 +26,42 @@ app.use(recommendstudentRouter) //recommend student by mentor
 
 1.UserTable 
 
-    | Field               | Type             | Description        |
-    |---------------------|------------------|--------------------|
-    | user_id             | varchar(36)      | Unique user ID.    |
-    | mentor_id           | varchar(36)      | Unique mentor ID.  |
-    | rating              | varchar          | Rating of the user.|
-    | review              | text (<= 50)     | Review text, limited to 50 characters. |
+| Field               | Type             | Description        |
+|---------------------|------------------|--------------------|
+| user_id             | varchar(36)      | Unique user ID.    |
+| mentor_id           | varchar(36)      | Unique mentor ID.  |
+| rating              | varchar          | Rating of the user.|
+| review              | text (<= 50)     | Review text, limited to 50 characters. |
 
 
 2.MentorTable
 
-    |       id         | username   | password | rating |
-    |----------------- |------------|----------|--------|
-    |   varchar(36)    | varchar    | varchar  | varchar|
-    |   `uuid()`       | `someone`  | `4781`   | 5      |
-    |   `uuid()`       | `musk`     | `6587`   | 2      |
+|       id         | username   | password | rating |
+|----------------- |------------|----------|--------|
+|   varchar(36)    | varchar    | varchar  | varchar|
+|   `uuid()`       | `someone`  | `4781`   | 5      |
+|   `uuid()`       | `musk`     | `6587`   | 2      |
 
 
 
 3.ReviewTable
 
-    | Field             | Type             | Description                   |
-    |-------------------|------------------|-------------------------------|
-    | user_id           | varchar(36)      | Unique user ID.               |
-    | mentor_id         | varchar(36)      | Unique mentor ID.             |
-    | rating            | varchar          | Rating of the interaction.    |
-    | review            | text (<= 50)     | Review text, limited to 50 characters. |
+| Field             | Type             | Description                   |
+|-------------------|------------------|-------------------------------|
+| user_id           | varchar(36)      | Unique user ID.               |
+| mentor_id         | varchar(36)      | Unique mentor ID.             |
+| rating            | varchar          | Rating of the interaction.    |
+| review            | text (<= 50)     | Review text, limited to 50 characters. |
 
 
 
 4.RecommendStudentTable
 
-    | Field             | Type             | Description                   |
-    |-------------------|------------------|-------------------------------|
-    | user_id           | varchar(36)      | Unique user ID.               |
-    | mentor_id         | varchar(36)      | Unique mentor ID.             |
-    | link              | varchar          | Link associated with the interaction. |
+| Field             | Type             | Description                   |
+|-------------------|------------------|-------------------------------|
+| user_id           | varchar(36)      | Unique user ID.               |
+| mentor_id         | varchar(36)      | Unique mentor ID.             |
+| link              | varchar          | Link associated with the interaction. |
 
 
  
