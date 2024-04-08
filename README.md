@@ -6,10 +6,10 @@ This api have functionalities mentioned in the Assignment
 3.Recommend student by mentor 
 
 ### It has **Four Tables** as specified
->1.User
->2.Mentor
->3.Review
->4.RecommendStudent
+-User
+-Mentor
+-Review
+-RecommendStudent
 
 ==Details can be found in schema.js in `db\schema.js`==
 
