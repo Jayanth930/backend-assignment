@@ -29,17 +29,21 @@ app.use(recommendstudentRouter) //recommend student by mentor
   |    `uuid()`    |     `jayanth`     |      `1254`       |
   |    `uuid()`    |     `hemanth`     |      `2541`       |
 
+
 2.MentorTable
   | id(varchar 36) | username(varchar) | password(varchar) | rating(varchar) |
   |    `uuid()`    |     `someone`     |      `4781`       |        5        |
   |    `uuid()`    |      `musk`       |      `6587`       |        2        |
 
+
 3.ReviewTable
   | user_id(varchar 36) | mentor_id(varchar 36) | rating(varchar) | review(text <= 50) |
 
+
 4.RecommendStudentTable;
   | user_id(varchar 36) | mentor_id(varchar 36) | link(varchar) | 
-  
+
+ 
 ==From `request.http` u an get all the links the api is exposed for testing purposes (*u can use postman as well*)==
 
 
