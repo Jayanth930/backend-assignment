@@ -51,7 +51,7 @@ app.use(recommendstudentRouter) //recommend student by mentor
 | user_id           | varchar(36)      | Unique user ID.               |
 | mentor_id         | varchar(36)      | Unique mentor ID.             |
 | rating            | varchar          | Rating of the interaction.    |
-| review            | text (<= 50)     | Review text, limited to 50 characters. |
+| review            | text (<= 50)     | Review text, limited to 50 words. |
 
 
 
