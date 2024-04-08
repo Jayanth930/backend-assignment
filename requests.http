@@ -1,0 +1,41 @@
+GET http://localhost:3500 HTTP/1.1
+
+###
+POST http://localhost:3500/register HTTP/1.1
+content-type : application/json
+
+{
+    "username" : "gireesh" ,
+    "password" : "1257"  
+}
+
+###
+POST http://localhost:3500/login HTTP/1.1
+content-type : application/json
+
+{
+    "username" : "gireesh",
+    "password" : "1257"
+}
+
+###
+POST http://localhost:3500/review/76241fc7-33f0-4bb4-bd5e-242bd393afdd HTTP/1.1
+content-type : application/json
+
+{
+    "mentor_username" : "pratyusha",
+    "rating" : "3",
+    "review" : "Excellent teacher (Gireesh reviews)"
+}
+
+###
+GET http://localhost:3500/review?rating=2 HTTP/1.1
+
+###
+POST http://localhost:3500/recommend/33b43a7d-8468-4759-9367-d2287e676818 HTTP/1.1
+content-type : application/json
+
+{
+    "username" : "gireesh",
+    "link" : "Some randomLink"
+}
