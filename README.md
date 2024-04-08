@@ -25,26 +25,47 @@ app.use(recommendstudentRouter) //recommend student by mentor
 ## Tables 
 
 1.UserTable 
-  | id(varchar 36) | username(varchar) | password(varchar) |
-  |    `uuid()`    |     `jayanth`     |      `1254`       |
-  |    `uuid()`    |     `hemanth`     |      `2541`       |
+
+    | Field               | Type             | Description        |
+    |---------------------|------------------|--------------------|
+    | user_id             | varchar(36)      | Unique user ID.    |
+    | mentor_id           | varchar(36)      | Unique mentor ID.  |
+    | rating              | varchar          | Rating of the user.|
+    | review              | text (<= 50)     | Review text, limited to 50 characters. |
 
 
 2.MentorTable
-  | id(varchar 36) | username(varchar) | password(varchar) | rating(varchar) |
-  |    `uuid()`    |     `someone`     |      `4781`       |        5        |
-  |    `uuid()`    |      `musk`       |      `6587`       |        2        |
+
+    |       id         | username   | password | rating |
+    |----------------- |------------|----------|--------|
+    |   varchar(36)    | varchar    | varchar  | varchar|
+    |   `uuid()`       | `someone`  | `4781`   | 5      |
+    |   `uuid()`       | `musk`     | `6587`   | 2      |
+
 
 
 3.ReviewTable
-  | user_id(varchar 36) | mentor_id(varchar 36) | rating(varchar) | review(text <= 50) |
+
+    | Field             | Type             | Description                   |
+    |-------------------|------------------|-------------------------------|
+    | user_id           | varchar(36)      | Unique user ID.               |
+    | mentor_id         | varchar(36)      | Unique mentor ID.             |
+    | rating            | varchar          | Rating of the interaction.    |
+    | review            | text (<= 50)     | Review text, limited to 50 characters. |
 
 
-4.RecommendStudentTable;
-  | user_id(varchar 36) | mentor_id(varchar 36) | link(varchar) | 
+
+4.RecommendStudentTable
+
+    | Field             | Type             | Description                   |
+    |-------------------|------------------|-------------------------------|
+    | user_id           | varchar(36)      | Unique user ID.               |
+    | mentor_id         | varchar(36)      | Unique mentor ID.             |
+    | link              | varchar          | Link associated with the interaction. |
+
 
  
-==From `request.http` u an get all the links the api is exposed for testing purposes (*u can use postman as well*)==
+### From `request.http` u an get all the links the api is exposed for testing purposes (*u can use postman as well*)
 
 
 # Setting Up Node.js Backend Application
@@ -88,8 +109,13 @@ Your backend server should now be running. Test the endpoints using tools like P
 Example:
 
 -GET http://localhost:3500 HTTP/1.1
+
 -POST <http://localhost:3500/register> (Json Payload)
+
 -POST <http://localhost:3500/login> (get id , used for rating and manymore)
+
 -POST <http://localhost:3500/review/==user_id==> (refer requests.http for type of json payload)
+
 -GET <http://localhost:3500/review?rating=(1||2||3||4||5)> (gives all the mentors whose rating>=`specified in query`)
+
 -POST <http://localhost:3500/recommend/==mentor_id==> (to update / set link for the reccomended student)
