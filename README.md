@@ -2,9 +2,9 @@
 
 This api have functionalities mentioned in the Assignment
 
-1.Rate & Review Mentor 
-2.Get mentor details 
-3.Recommend student by mentor 
+1. Rate & Review Mentor 
+2. Get mentor details 
+3. Recommend student by mentor 
 
 ### It has **Four Tables** as specified
 - User
@@ -25,7 +25,7 @@ app.use(recommendstudentRouter) //recommend student by mentor
 ```
 ## Tables 
 
-1.UserTable 
+1. UserTable 
 
 | Field               | Type             | Description        |
 |---------------------|------------------|--------------------|
@@ -35,7 +35,7 @@ app.use(recommendstudentRouter) //recommend student by mentor
 | review              | text (<= 50)     | Review text, limited to 50 characters. |
 
 
-2.MentorTable
+2. MentorTable
 
 |       id         | username   | password | rating |
 |----------------- |------------|----------|--------|
@@ -45,7 +45,7 @@ app.use(recommendstudentRouter) //recommend student by mentor
 
 
 
-3.ReviewTable
+3. ReviewTable
 
 | Field             | Type             | Description                   |
 |-------------------|------------------|-------------------------------|
@@ -56,7 +56,7 @@ app.use(recommendstudentRouter) //recommend student by mentor
 
 
 
-4.RecommendStudentTable
+4. RecommendStudentTable
 
 | Field             | Type             | Description                   |
 |-------------------|------------------|-------------------------------|
